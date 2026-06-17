@@ -340,8 +340,8 @@ a {
 .logo-full {
   height: 40px; /* wordmark mucho más pequeño */
   width: auto;
-  margin-left: 10px;
-  margin-right: 28px; /* más separación a la derecha */
+  margin-left: 0px;
+  margin-right: 48px; /* más separación a la derecha */
   pointer-events: none;
 }
 
