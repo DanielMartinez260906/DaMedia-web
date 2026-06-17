@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="DAMEDIA - Desarrollo de software empresarial a medida, páginas web profesionales y soluciones tecnológicas avanzadas del futuro. Impulsamos empresas.">
+  <meta name="keywords" content="desarrollo de software, paginas web, software empresarial, damedia, tecnologia, sistemas a medida, inteligencia artificial, apps moviles">
+  <meta name="author" content="DAMEDIA">
+  <title>DAMEDIA | Desarrollo de Software &amp; Páginas Web para Empresas</title>
+  
+  <!-- Google Fonts para estilo futurista y legible -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;900&amp;family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&amp;family=Space+Grotesk:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+  
+  <!-- FontAwesome para iconos de alta calidad -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- Estilos principales -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- CAPA DE FONDO CIBERNÉTICO E INTERACTIVO -->
+  <div class="cyber-grid"></div>
+  <div class="glow-orb orb-1"></div>
+  <div class="glow-orb orb-2"></div>
+  <div class="glow-orb orb-3"></div>
+  <canvas id="particle-canvas"></canvas>
+
+  <!-- MENÚ DE NAVEGACIÓN (NAVBAR) -->
+  <header class="navbar">
+    <div class="nav-container">
+      <a href="#inicio" class="logo-link" id="nav-logo">
+        <!-- Logo compuesto: icon a la izq y wordmark a la derecha -->
+        <img src="assets/logo-icon.png" alt="DAMEDIA Icon" class="logo-icon" id="logo-icon">
+        <img src="assets/nombre_de_damedia-removebg-preview.png" alt="DAMEDIA" class="logo-full" id="logo-full">
+      </a>
+
+      <!-- Botón menú hamburguesa para móviles -->
+      <button class="menu-toggle" id="menu-toggle" aria-label="Abrir Menú">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </button>
+
+      <!-- Enlaces de navegación -->
+      <nav class="nav-menu" id="nav-menu">
+        <a href="#inicio" class="nav-item active">Inicio</a>
+        <a href="#nosotros" class="nav-item">Nosotros</a>
+        <a href="#servicios" class="nav-item">Servicios</a>
+        <a href="#proceso" class="nav-item">Proceso</a>
+        <a href="#cotizar" class="nav-item">Cotizar</a>
+        
+        <!-- Controlador de Sonido Interactivo -->
+        <button class="sound-ctrl-btn" id="sound-toggle" title="Activar/Desactivar Sonidos de Interfaz">
+          <i class="fas fa-volume-mute"></i>
+          <span>SFX OFF</span>
+        </button>
+        
+        <a href="#cotizar" class="btn btn-primary nav-cta">Iniciar Proyecto</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- SECCIÓN HÉROE (HERO SECTION) -->
+  <section id="inicio" class="hero-section">
+    <div class="container hero-container">
+      <div class="hero-content">
+        <div class="cyber-tag" data-text="SISTEMA ACTIVO v2.6">
+          <span class="pulse-dot"></span> SOFTWARE DEL FUTURO, HOY
+        </div>
+        <h1 class="hero-title">
+          DESARROLLAMOS <span class="gradient-text">SOFTWARE</span>. IMPULSAMOS <span class="gradient-text-alt">EMPRESAS</span>.
+        </h1>
+        <p class="hero-subtitle">
+          Creamos soluciones digitales de alto impacto: desde páginas web hiper-optimizadas hasta sistemas empresariales robustos potenciados por Inteligencia Artificial.
+        </p>
+        <div class="hero-actions">
+          <a href="#cotizar" class="btn btn-primary btn-glow btn-lg">
+            <i class="fas fa-bolt"></i> Solicitar Pedido
+          </a>
+          <a href="#servicios" class="btn btn-outline btn-lg">
+            <i class="fas fa-eye"></i> Explora Servicios
+          </a>
+        </div>
+      </div>
+
+      <!-- Tarjeta Holográfica del Héroe -->
+      <div class="hero-visual">
+        <div class="holo-card" id="holo-card">
+          <div class="holo-card-glow"></div>
+          <div class="holo-header">
+            <div class="holo-dots">
+              <span class="dot-red"></span>
+              <span class="dot-yellow"></span>
+              <span class="dot-green"></span>
+            </div>
+            <div class="holo-title-bar">DAMEDIA_ENGINE_v1.0</div>
+          </div>
+          <div class="holo-body">
+            <div class="console-line"><span class="cmd-prompt">></span> npm run deploy:future</div>
+            <div class="console-line text-blue"><span class="cmd-prompt">></span> [DAMEDIA] Initializing core modules...</div>
+            <div class="console-line text-green"><span class="cmd-prompt">></span> UI/UX Engine: ONLINE (Futuristic Glass Mode)</div>
+            <div class="console-line text-green"><span class="cmd-prompt">></span> Database Integrations: READY</div>
+            <div class="console-line text-cyan"><span class="cmd-prompt">></span> AI Neural Agents: ACTIVE &amp; MONITORING</div>
+            <div class="console-line text-yellow"><span class="cmd-prompt">></span> Status: Perfect. Ready to scale your business.</div>
+            
+            <div class="holo-diagram">
+              <svg viewBox="0 0 200 100" class="mini-chart">
+                <path d="M10,80 Q50,20 100,50 T190,10" fill="none" stroke="url(#chartGrad)" stroke-width="3" stroke-linecap="round" />
+                <linearGradient id="chartGrad" x1="0" y1="0" x2="1" y2="0">
+                  <stop offset="0%" stop-color="#00f0ff" />
+                  <stop offset="100%" stop-color="#0055ff" />
+                </linearGradient>
+                <circle cx="100" cy="50" r="5" fill="#00f0ff" class="glow-dot" />
+                <circle cx="190" cy="10" r="5" fill="#0055ff" class="glow-dot" />
+              </svg>
+            </div>
+            <div class="holo-footer-stats">
+              <div class="stat-item">
+                <span class="stat-val">100%</span>
+                <span class="stat-label">Hecho a Medida</span>
+              </div>
+              <div class="stat-item">
+                <span class="stat-val">&lt; 1s</span>
+                <span class="stat-label">Carga Web</span>
+              </div>
+              <div class="stat-item">
+                <span class="stat-val">24/7</span>
+                <span class="stat-label">Soporte Cloud</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECCIÓN NOSOTROS (ABOUT SECTION) -->
+  <section id="nosotros" class="about-section">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title"><span class="section-num">01 //</span> QUIÉNES SOMOS</h2>
+        <p class="section-desc">Arquitectos digitales construyendo las herramientas del mañana para las empresas de hoy.</p>
+      </div>
+
+      <div class="about-grid">
+        <div class="about-info-card">
+          <h3>Ingeniería de Software sin Límites</h3>
+          <p>
+            En **DAMEDIA** no creemos en plantillas genéricas ni soluciones a medias. Desarrollamos desde cero aplicaciones web de alto rendimiento, plataformas de comercio electrónico robustas y sistemas de gestión interna que automatizan los procesos de tu negocio.
+          </p>
+          <p>
+            Fusionamos diseño vanguardista con infraestructura en la nube escalable y segura. Nuestro objetivo es que tu empresa no solo tenga presencia digital, sino que domine tecnológicamente en su sector.
+          </p>
+          
+          <div class="tech-icons-title">STACK TECNOLÓGICO DE VANGUARDIA:</div>
+          <div class="tech-stack-flex">
+            <span class="tech-badge" title="HTML5 &amp; CSS3 Moderno"><i class="fab fa-html5 text-orange"></i> HTML/CSS</span>
+            <span class="tech-badge" title="JavaScript Avanzado / TypeScript"><i class="fab fa-js text-yellow"></i> JavaScript</span>
+            <span class="tech-badge" title="Node.js &amp; Servidores API"><i class="fab fa-node-js text-green"></i> Node.js</span>
+            <span class="tech-badge" title="Bases de Datos Relacionales y NoSQL"><i class="fas fa-database text-cyan"></i> SQL/NoSQL</span>
+            <span class="tech-badge" title="Amazon Web Services &amp; Google Cloud"><i class="fab fa-aws text-orange"></i> AWS / Cloud</span>
+            <span class="tech-badge" title="Modelos de Lenguaje &amp; Chatbots"><i class="fas fa-brain text-purple"></i> IA Integrada</span>
+          </div>
+        </div>
+
+        <div class="about-features">
+          <div class="feature-card">
+            <div class="feat-icon"><i class="fas fa-rocket"></i></div>
+            <div class="feat-content">
+              <h4>Velocidad Extrema</h4>
+              <p>Optimizamos el rendimiento de cada línea de código para lograr tiempos de carga instantáneos.</p>
+            </div>
+          </div>
+          <div class="feature-card">
+            <div class="feat-icon"><i class="fas fa-shield-halved"></i></div>
+            <div class="feat-content">
+              <h4>Seguridad de Nivel Bancario</h4>
+              <p>Protegemos tus datos y los de tus clientes implementando los más altos estándares de cifrado y seguridad.</p>
+            </div>
+          </div>
+          <div class="feature-card">
+            <div class="feat-icon"><i class="fas fa-arrows-spin"></i></div>
+            <div class="feat-content">
+              <h4>Escalabilidad Infinita</h4>
+              <p>Tu software crecerá a la par de tu negocio. Diseñamos arquitecturas modulares listas para el futuro.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECCIÓN SERVICIOS (SERVICES SECTION) -->
+  <section id="servicios" class="services-section">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title"><span class="section-num">02 //</span> NUESTROS SERVICIOS</h2>
+        <p class="section-desc">Diseñamos y programamos soluciones personalizadas según las necesidades de tu empresa.</p>
+      </div>
+
+      <div class="services-grid">
+        <!-- Tarjeta 1: Páginas Web -->
+        <div class="service-card" data-service="web">
+          <div class="service-icon"><i class="fas fa-laptop-code"></i></div>
+          <h3 class="service-name">Páginas Web Premium</h3>
+          <p class="service-text">
+            Sitios web corporativos impactantes, portafolios y landing pages con diseños futuristas interactivos, optimización SEO de primer nivel y total compatibilidad con dispositivos móviles.
+          </p>
+          <ul class="service-list">
+            <li><i class="fas fa-chevron-right"></i> Diseño exclusivo y 100% interactivo</li>
+            <li><i class="fas fa-chevron-right"></i> SEO Técnico para posicionar en Google</li>
+            <li><i class="fas fa-chevron-right"></i> Panel de administración autogestionable</li>
+          </ul>
+          <button class="btn btn-outline btn-sm service-select-btn">Cotizar Web</button>
+        </div>
+
+        <!-- Tarjeta 2: Software a Medida -->
+        <div class="service-card" data-service="software">
+          <div class="service-icon"><i class="fas fa-cogs"></i></div>
+          <h3 class="service-name">Sistemas y Software Empresarial</h3>
+          <p class="service-text">
+            Desarrollo de sistemas internos a la medida de tu flujo de trabajo: CRMs, ERPs, gestores de inventario, automatización de facturación y portales de clientes.
+          </p>
+          <ul class="service-list">
+            <li><i class="fas fa-chevron-right"></i> Automatización de tareas repetitivas</li>
+            <li><i class="fas fa-chevron-right"></i> Integración con APIs de terceros</li>
+            <li><i class="fas fa-chevron-right"></i> Bases de datos seguras y veloces</li>
+          </ul>
+          <button class="btn btn-outline btn-sm service-select-btn">Cotizar Software</button>
+        </div>
+
+        <!-- Tarjeta 3: Apps Móviles -->
+        <div class="service-card" data-service="app">
+          <div class="service-icon"><i class="fas fa-mobile-screen-button"></i></div>
+          <h3 class="service-name">Aplicaciones Móviles</h3>
+          <p class="service-text">
+            Creamos apps intuitivas y potentes para iOS y Android que conectan directamente con tus sistemas de negocio, manteniendo informados y fidelizados a tus usuarios.
+          </p>
+          <ul class="service-list">
+            <li><i class="fas fa-chevron-right"></i> Publicación en App Store y Google Play</li>
+            <li><i class="fas fa-chevron-right"></i> Notificaciones push inteligentes</li>
+            <li><i class="fas fa-chevron-right"></i> Funcionamiento offline optimizado</li>
+          </ul>
+          <button class="btn btn-outline btn-sm service-select-btn">Cotizar App</button>
+        </div>
+
+        <!-- Tarjeta 4: Inteligencia Artificial -->
+        <div class="service-card" data-service="ai">
+          <div class="service-icon"><i class="fas fa-brain"></i></div>
+          <h3 class="service-name">IA &amp; Automatizaciones</h3>
+          <p class="service-text">
+            Integramos modelos de lenguaje avanzados, análisis predictivo de datos y chatbots autónomos que elevan la productividad y atención al cliente de tu empresa al siguiente nivel.
+          </p>
+          <ul class="service-list">
+            <li><i class="fas fa-chevron-right"></i> Chatbots de atención inteligente 24/7</li>
+            <li><i class="fas fa-chevron-right"></i> Análisis automático de documentos</li>
+            <li><i class="fas fa-chevron-right"></i> Algoritmos de predicción comercial</li>
+          </ul>
+          <button class="btn btn-outline btn-sm service-select-btn">Cotizar IA</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECCIÓN PROCESO (PROCESS SECTION) -->
+  <section id="proceso" class="process-section">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title"><span class="section-num">03 //</span> EL PROCESO TECNOLÓGICO</h2>
+        <p class="section-desc">Garantizamos el éxito de tu proyecto mediante un método riguroso y transparente.</p>
+      </div>
+
+      <div class="process-timeline">
+        <div class="timeline-line"></div>
+        
+        <!-- Paso 1 -->
+        <div class="timeline-step">
+          <div class="step-num">01</div>
+          <div class="step-content">
+            <h4>Briefing &amp; Descubrimiento</h4>
+            <p>Escuchamos tu visión, analizamos los cuellos de botella de tu negocio y definimos el alcance tecnológico ideal para tu proyecto.</p>
+          </div>
+        </div>
+
+        <!-- Paso 2 -->
+        <div class="timeline-step">
+          <div class="step-num">02</div>
+          <div class="step-content">
+            <h4>Planificación y Prototipado</h4>
+            <p>Diseñamos los diagramas de arquitectura, las bases de datos y la interfaz de usuario (wireframes) antes de codificar.</p>
+          </div>
+        </div>
+
+        <!-- Paso 3 -->
+        <div class="timeline-step">
+          <div class="step-num">03</div>
+          <div class="step-content">
+            <h4>Desarrollo / Codificación</h4>
+            <p>Nuestros ingenieros escriben código limpio, modular y seguro, manteniéndote informado de los avances mediante demos constantes.</p>
+          </div>
+        </div>
+
+        <!-- Paso 4 -->
+        <div class="timeline-step">
+          <div class="step-num">04</div>
+          <div class="step-content">
+            <h4>Optimización y Despliegue</h4>
+            <p>Realizamos pruebas intensivas de carga, seguridad y compatibilidad antes de lanzar el software en servidores en la nube de alta disponibilidad.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECCIÓN CONTACTO / FORMULARIO INTELIGENTE (CONTACT & ORDER SECTION) -->
+  <section id="cotizar" class="contact-section">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title"><span class="section-num">04 //</span> SOLICITAR INFORMACIÓN O PEDIDO</h2>
+        <p class="section-desc">Escribe lo que necesitas y nuestro sistema de procesamiento guiará tu solicitud al área indicada.</p>
+      </div>
+
+      <div class="contact-container">
+        <!-- Formulario Futurista Estilo Terminal -->
+        <div class="order-terminal">
+          <div class="terminal-header">
+            <span class="status-indicator online"></span>
+            <span class="terminal-title">NEXUS_ORDER_FORM_v2.0</span>
+            <div class="terminal-controls">
+              <span class="window-dot"></span>
+              <span class="window-dot"></span>
+              <span class="window-dot"></span>
+            </div>
+          </div>
+
+          <div class="terminal-tabs">
+            <button class="tab-btn active" data-step="1">1. Tipo de Servicio</button>
+            <button class="tab-btn" data-step="2" id="btn-tab-2">2. Especificaciones</button>
+            <button class="tab-btn" data-step="3" id="btn-tab-3">3. Datos de Enlace</button>
+          </div>
+
+          <form id="smart-order-form" class="terminal-form">
+            <!-- PASO 1: Selección de Servicio -->
+            <div class="form-step step-active" data-step="1">
+              <label class="terminal-label">SELECCIONA EL SERVICIO BASE QUE REQUIERES:</label>
+              <div class="service-selector-grid">
+                
+                <label class="selector-card">
+                  <input type="radio" name="servicio" value="Páginas Web Premium" checked>
+                  <div class="selector-card-content">
+                    <i class="fas fa-laptop-code"></i>
+                    <span>Páginas Web</span>
+                  </div>
+                </label>
+
+                <label class="selector-card">
+                  <input type="radio" name="servicio" value="Sistemas y Software Empresarial">
+                  <div class="selector-card-content">
+                    <i class="fas fa-cogs"></i>
+                    <span>Software Empresarial</span>
+                  </div>
+                </label>
+
+                <label class="selector-card">
+                  <input type="radio" name="servicio" value="Aplicaciones Móviles">
+                  <div class="selector-card-content">
+                    <i class="fas fa-mobile-screen-button"></i>
+                    <span>Apps Móviles</span>
+                  </div>
+                </label>
+
+                <label class="selector-card">
+                  <input type="radio" name="servicio" value="IA &amp; Automatizaciones">
+                  <div class="selector-card-content">
+                    <i class="fas fa-brain"></i>
+                    <span>IA / Automatizaciones</span>
+                  </div>
+                </label>
+
+              </div>
+              
+              <div class="step-footer">
+                <button type="button" class="btn btn-primary next-step-btn">Siguiente <i class="fas fa-arrow-right"></i></button>
+              </div>
+            </div>
+
+            <!-- PASO 2: Descripción y Especificaciones -->
+            <div class="form-step" data-step="2">
+              <label for="descripcion-proyecto" class="terminal-label">DESCRIBE DETALLADAMENTE TU IDEA O LO QUE DESEAS SOLICITAR:</label>
+              <div class="textarea-wrapper">
+                <span class="input-glow-bar"></span>
+                <textarea id="descripcion-proyecto" name="descripcion" placeholder="Ejemplo: Necesito una página web para mi distribuidora de alimentos que muestre nuestro catálogo de productos en tiempo real, con diseño futurista e integración de pagos en línea..." required></textarea>
+                <div class="textarea-stats">
+                  <span id="char-counter">0 / 500 caracteres</span>
+                </div>
+              </div>
+
+              <!-- Sugerencias de Entrada rápidas -->
+              <div class="prompt-suggestions">
+                <span class="sug-label">Añadir detalles técnicos comunes:</span>
+                <div class="sug-flex">
+                  <button type="button" class="btn-sug" data-add=" + Requiere base de datos y login de usuarios.">Base de Datos</button>
+                  <button type="button" class="btn-sug" data-add=" + Necesito pasarela de pago (tarjetas/PSE).">Pasarela de Pagos</button>
+                  <button type="button" class="btn-sug" data-add=" + Optimización SEO avanzada.">SEO Avanzado</button>
+                  <button type="button" class="btn-sug" data-add=" + Panel de control administrador.">Panel Administrador</button>
+                </div>
+              </div>
+
+              <div class="step-footer-split">
+                <button type="button" class="btn btn-outline prev-step-btn"><i class="fas fa-arrow-left"></i> Atrás</button>
+                <button type="button" class="btn btn-primary next-step-btn">Siguiente <i class="fas fa-arrow-right"></i></button>
+              </div>
+            </div>
+
+            <!-- PASO 3: Datos de Contacto y Envío -->
+            <div class="form-step" data-step="3">
+              <label class="terminal-label">INFORMACIÓN DE ENLACE CORPORATIVO:</label>
+              
+              <div class="input-grid">
+                <div class="input-group">
+                  <label for="nombre-cliente" class="input-label"><i class="fas fa-user"></i> Nombre de Contacto</label>
+                  <div class="input-field-wrapper">
+                    <input type="text" id="nombre-cliente" name="nombre" placeholder="Daniel Martínez" required>
+                    <span class="input-focus-line"></span>
+                  </div>
+                </div>
+
+                <div class="input-group">
+                  <label for="email-cliente" class="input-label"><i class="fas fa-envelope"></i> Correo Electrónico</label>
+                  <div class="input-field-wrapper">
+                    <input type="email" id="email-cliente" name="email" placeholder="daniel@empresa.com" required>
+                    <span class="input-focus-line"></span>
+                  </div>
+                </div>
+
+                <div class="input-group">
+                  <label for="telefono-cliente" class="input-label"><i class="fas fa-phone"></i> Número Telefónico</label>
+                  <div class="input-field-wrapper">
+                    <input type="tel" id="telefono-cliente" name="telefono" placeholder="+57 300 000 0000" required>
+                    <span class="input-focus-line"></span>
+                  </div>
+                </div>
+
+                <div class="input-group">
+                  <label for="presupuesto-rango" class="input-label"><i class="fas fa-money-bill-wave"></i> Nivel de Proyecto Estimado</label>
+                  <div class="budget-slider-wrapper">
+                    <input type="range" id="presupuesto-rango" name="presupuesto" min="1" max="4" value="2">
+                    <div class="budget-steps">
+                      <span>Básico</span>
+                      <span>Estándar</span>
+                      <span>Avanzado</span>
+                      <span>Premium</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Casilla de aceptación -->
+              <label class="checkbox-container">
+                <input type="checkbox" checked required>
+                <span class="checkmark"></span>
+                Acepto que DAMEDIA procese mis datos para cotización de servicios tecnológicos.
+              </label>
+
+              <div class="step-footer-split">
+                <button type="button" class="btn btn-outline prev-step-btn"><i class="fas fa-arrow-left"></i> Atrás</button>
+                <button type="submit" class="btn btn-primary btn-glow" id="submit-btn">
+                  <i class="fas fa-paper-plane"></i> Transmitir Pedido
+                </button>
+              </div>
+            </div>
+          </form>
+
+          <!-- Pantalla de Carga y Éxito de la Terminal -->
+          <div class="terminal-loader" id="terminal-loader">
+            <div class="loader-content">
+              <div class="spinner-cyber">
+                <div class="spinner-ring"></div>
+                <div class="spinner-ring"></div>
+                <div class="spinner-ring"></div>
+                <i class="fas fa-terminal loader-icon"></i>
+              </div>
+              <h3 id="loader-title">Procesando Solicitud...</h3>
+              <div class="console-box" id="console-box">
+                <!-- Líneas de consola agregadas dinámicamente mediante JS -->
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Información Adicional de Contacto -->
+        <div class="contact-info">
+          <div class="info-cyber-card">
+            <h4>CANALES DIRECTOS DE COMUNICACIÓN</h4>
+            <div class="contact-method">
+              <div class="c-icon"><i class="fas fa-envelope"></i></div>
+              <div class="c-details">
+                <span>CORREO CENTRAL</span>
+                <strong>contacto@damedia.com</strong>
+              </div>
+            </div>
+            
+            <div class="contact-method">
+              <div class="c-icon"><i class="fab fa-whatsapp"></i></div>
+              <div class="c-details">
+                <span>ENLACE WHATSAPP</span>
+                <strong>+57 300 123 4567</strong>
+              </div>
+            </div>
+
+            <div class="contact-method">
+              <div class="c-icon"><i class="fas fa-location-dot"></i></div>
+              <div class="c-details">
+                <span>SEDE CENTRAL</span>
+                <strong>Medellín, Colombia (Soporte Global)</strong>
+              </div>
+            </div>
+
+            <div class="neon-divider"></div>
+
+            <div class="status-board">
+              <div class="status-title"><i class="fas fa-circle-nodes"></i> ESTADO DE LOS SERVIDORES</div>
+              <div class="status-item">
+                <span>Servidor de Aplicaciones (App Node)</span>
+                <span class="tag-status online">99.98%</span>
+              </div>
+              <div class="status-item">
+                <span>Base de Datos Principal (PostgreSQL)</span>
+                <span class="tag-status online">OPERATIVO</span>
+              </div>
+              <div class="status-item">
+                <span>Agente de Automatización IA v2</span>
+                <span class="tag-status online">ACTIVO</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PIE DE PÁGINA (FOOTER) -->
+  <footer class="footer">
+    <div class="container footer-container">
+      <div class="footer-brand">
+        <!-- Logo -->
+        <img src="assets/nombre_de_damedia-removebg-preview.png" alt="DAMEDIA Logo" class="footer-logo-img" loading="lazy">
+        <p class="footer-desc">
+          Creamos el software de alta tecnología que impulsa y escala tu empresa al siguiente nivel competitivo.
+        </p>
+        <div class="social-links">
+          <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+          <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
+          <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+          <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        </div>
+      </div>
+
+      <div class="footer-links">
+        <h4>ENLACES RÁPIDOS</h4>
+        <ul>
+          <li><a href="#inicio"><i class="fas fa-chevron-right"></i> Inicio</a></li>
+          <li><a href="#nosotros"><i class="fas fa-chevron-right"></i> Nosotros</a></li>
+          <li><a href="#servicios"><i class="fas fa-chevron-right"></i> Servicios</a></li>
+          <li><a href="#proceso"><i class="fas fa-chevron-right"></i> Proceso</a></li>
+          <li><a href="#cotizar"><i class="fas fa-chevron-right"></i> Cotizar</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-services-list">
+        <h4>SERVICIOS</h4>
+        <ul>
+          <li><a href="#cotizar"><i class="fas fa-chevron-right"></i> Páginas Web Premium</a></li>
+          <li><a href="#cotizar"><i class="fas fa-chevron-right"></i> Software a Medida</a></li>
+          <li><a href="#cotizar"><i class="fas fa-chevron-right"></i> Apps Móviles</a></li>
+          <li><a href="#cotizar"><i class="fas fa-chevron-right"></i> IA &amp; Automatizaciones</a></li>
+        </ul>
+      </div>
+    </div>
+    
+    <div class="footer-bottom">
+      <p>&copy; <span id="copy-year">2026</span> **DAMEDIA**. Todos los derechos reservados. | Desarrollamos Software. Impulsamos Empresas.</p>
+    </div>
+  </footer>
+
+  <!-- Archivo de JavaScript de interacción -->
+  <script src="script.js"></script>
+</body>
+</html>
